@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ExamenJSF">
+		<class>Entities.Accesocaja</class>
+		<class>Entities.AccesocajaPK</class>
+		<class>Entities.Caja</class>
+		<class>Entities.Cliente</class>
+		<class>Entities.Ingreso</class>
+		<class>Entities.Ingresonormal</class>
+		<class>Entities.Ingresotarjeta</class>
+		<class>Entities.Pago</class>
+		<class>Entities.Pagomensual</class>
+		<class>Entities.Pagoservicio</class>
+		<class>Entities.Rol</class>
+		<class>Entities.Tarifa</class>
+		<class>Entities.Tarjeta</class>
+		<class>Entities.Tipocliente</class>
+		<class>Entities.Tipotarifa</class>
+		<class>Entities.Tipovehiculo</class>
+		<class>Entities.Usuario</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/examen" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>

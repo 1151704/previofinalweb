@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<title>Ver Clientes</title>
+</h:head>
+<h:body>
+	<b:container>
+		<h:form>
+			<b:dataTable value="#{clienteBean.listarClientes()}" var="em">
+				<b:dataTableColumn value="#{em.nombre}" />
+				<b:dataTableColumn value="#{em.documento}" label="Nombre" />
+				<b:dataTableColumn value="#{em.telefono}" label="Documento" />
+				<b:dataTableColumn value="#{em.tipoclienteBean.descripcion}"
+					label="Tipo de Cliente" />
+				<b:dataTableColumn value="#{em.usuarioBean.usuario}"
+					label="Registrado por" />
+				<b:dataTableColumn label="Editar">
+					<b:commandButton value="editar" icon="edit" action="#">
+					</b:commandButton>
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Borrar">
+					<b:commandButton value="borrar" icon="trash" action="#">
+					</b:commandButton>
+				</b:dataTableColumn>
+			</b:dataTable>
+		</h:form>
+	</b:container>
+</h:body>
+</html>
